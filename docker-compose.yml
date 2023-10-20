@@ -7,5 +7,7 @@ services:
     container_name: marketdb
     ports:
       - "3306:3306"
+    volumes: 
+      - marketdbdata: /var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=root
