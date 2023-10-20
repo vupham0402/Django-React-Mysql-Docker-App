@@ -1,0 +1,180 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+d
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination-button {
+  background-color: #e6e6e6;
+  color: #333;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.pagination-button.active {
+  background-color: #333;
+  color: #fff;
+}
+
+.pagination-ellipsis {
+  background-color: #e6e6e6;
+  color: #999;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  margin-right: 5px;
+  cursor: not-allowed;
+}
+
+.highlight {
+  background-color: #ffff66;
+}
+
+.react-autosuggest__suggestions-list {
+  list-style: none;
+  color: #333;
+}
+
+.red {
+  background-color: #FF5C5C !important;
+  color: white;
+}
+
+.two-column-layout {
+  display: flex;
+}
+
+.column {
+  padding: 20px;
+}
+
+.left-column {
+  flex: 1; 
+}
+
+.right-column {
+  flex: 4; 
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.product {
+  width: calc(50% - 10px); /* Each product takes up 50% width minus some gap */
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.product-display {
+  flex: 0 0 calc(50% - 10px); /* Each product takes up 50% of the container width with 10px spacing */
+  padding: 10px; /* Add padding around each product */
+  border: 1px solid #ccc; /* Add a border to each product */
+  box-sizing: border-box; /* Include padding and border in the width */
+  margin-right: 10px; /* Add right margin to create space between products */
+}
+
+.product-page {
+  width: calc(100% - 10px); 
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.list a {
+  text-decoration: none;
+  color: #000;
+}
+
+.list a:hover{
+  text-decoration: underline;
+}
+
+.box {
+  border-top: 1px solid #ccc;
+  padding: 10px;
+  margin: 0;
+  width: 60%;
+}
+
+.box:last-child {
+  border-bottom: 1px solid #ccc;
+}
+
+.sort-by {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.tooltip-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 5px;
+  z-index: 1;
+  font-weight: lighter;
+}
+
+.tooltip-trigger:hover .tooltip-content {
+  display: block;
+}
