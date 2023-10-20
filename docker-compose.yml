@@ -1,5 +1,25 @@
 version: "3.8"
 services:
+  marketexpress:
+    build:
+      context: ./frontend
+    ports: 
+      - "5000:5000"
+
+  marketreact:
+    build:
+      context: ./frontend/client
+    ports:
+      - "3000:3000"
+  
+  marketdjango:
+    build:
+      context: ./backend
+    ports:
+      - "8000:8000"
+    depends_on:
+      - marketdb
+
   marketdb:
     build:
       context: ./database
