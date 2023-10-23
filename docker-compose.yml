@@ -14,7 +14,7 @@ services:
     image: vupham0402/marketreact
     container_name: marketreact
     ports:
-      - "8080:8080"
+      - "3000:3000"
 
   marketnginx:
     build:
