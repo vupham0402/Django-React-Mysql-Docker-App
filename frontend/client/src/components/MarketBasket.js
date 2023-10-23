@@ -888,9 +888,11 @@ export default function MarketBasket() {
     // check authenticed user to get access this page
     const { isAuthenticated, user} = useSelector(state => state.user);
 	if (isAuthenticated && user !== null)   
+    {
         return (
             <div>
                 <ProductView />
             </div>
         );
+    }
   }
