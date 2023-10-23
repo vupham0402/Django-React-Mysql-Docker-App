@@ -3,18 +3,24 @@ services:
   marketexpress:
     build:
       context: ./frontend
+    image: vupham0402/marketexpress
+    container_name: marketexpress
     ports: 
       - "5000:5000"
 
   marketreact:
     build:
       context: ./frontend/client
+    image: vupham0402/marketreact
+    container_name: marketreact
     ports:
       - "3000:3000"
   
   marketdjango:
     build:
       context: ./backend
+    image: vupham0402/marketdjango
+    container_name: marketdjango
     ports:
       - "8000:8000"
     depends_on:
