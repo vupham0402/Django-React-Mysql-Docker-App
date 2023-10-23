@@ -2,7 +2,7 @@
 FROM python:3.7.2
 
 # Set the working directory
-WORKDIR /app
+WORKDIR /usr/src/app
 
 # Copy and install the project's dependencies
 COPY requirements.txt .
