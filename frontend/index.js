@@ -1,8 +1,6 @@
 const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
-const http = require('http');
-const WebSocket = require('ws');
 
 require('dotenv').config();
 
@@ -13,18 +11,6 @@ const registerRoute = require('./client/routes/auth/register');
 const verifyRoute = require('./client/routes/auth/verify');
 
 const app = express();
-const server = http.createServer(app);
-const wss = new WebSocket.Server({ server });
-
-wss.on('connection', (ws) => {
-  // WebSocket connection established
-  console.log('WebSocket connection established');
-
-  ws.on('message', (message) => {
-    // Handle WebSocket messages
-    console.log(`Received: ${message}`);
-  });
-});
 
 app.use(express.json());
 app.use(cookieParser());
