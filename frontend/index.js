@@ -17,13 +17,13 @@ const server = http.createServer(app);
 const wss = new WebSocket.Server({ server });
 
 wss.on('connection', (ws) => {
-	// WebSocket connection established
-	console.log('WebSocket connection established');
-  
-	ws.on('message', (message) => {
-	  // Handle WebSocket messages
-	  console.log(`Received: ${message}`);
-	});
+  // WebSocket connection established
+  console.log('WebSocket connection established');
+
+  ws.on('message', (message) => {
+    // Handle WebSocket messages
+    console.log(`Received: ${message}`);
+  });
 });
 
 app.use(express.json());
