@@ -4,8 +4,9 @@ module.exports = function (app) {
 	app.use(
 		'/api',
 		createProxyMiddleware({
-			target: 'marketexpress',
+			target: 'http://marketexpress',
 			changeOrigin: true,
+			ws: true, // Enable WebSocket support
 		})
 	);
 };
