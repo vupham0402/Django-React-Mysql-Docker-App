@@ -8,10 +8,6 @@ WORKDIR /usr/src/app
 COPY requirements.txt .
 RUN python -m pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
-RUN python manage.py makemigrations backend
-RUN python manage.py migrate backend
-RUN python manage.py makemigrations users
-RUN python manage.py migrate users
 
 
 # Copy the rest of the application code
