@@ -119,7 +119,7 @@ export default function MappingTable() {
 
         if (table_name !== '') {
             try {      
-                const response = await axios.get(API_URL + `/backend/get-columns/${table_name}/`);
+                const response = await axios.get('http://18.208.184.78:8000' + `/backend/get-columns/${table_name}/`);
                 setColumns(response.data.columns);
             } catch (error) {
                 console.error('Error fetching columns:', error);
@@ -262,7 +262,7 @@ export default function MappingTable() {
     
     const fetchItems = async () => {
         try {
-        const response = await axios.get(API_URL + '/backend/analyst/');
+        const response = await axios.get('http://18.208.184.78:8000' + '/backend/analyst/');
         setItems(response.data);
         } catch (error) {
         console.error('Error:', error);
