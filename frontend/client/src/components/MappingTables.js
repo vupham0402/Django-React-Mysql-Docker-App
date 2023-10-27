@@ -281,7 +281,7 @@ export default function MappingTable() {
                 error: 'null', // Set the default value for 'issue_cln' key here
             }));
             axios
-            .post(API_URL + '/backend/upload-file/', newColumns, {
+            .post('http://18.208.184.78:8000' + '/backend/upload-file/', newColumns, {
               headers: {
                 'Content-Type': 'application/json',
               },
